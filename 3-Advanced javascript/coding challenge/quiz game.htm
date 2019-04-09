@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //class creation
+    var Question=function(question,ansArr,correctAns) {
+        this.question=question
+        this.ansArr=ansArr
+        this.correctAns=correctAns
+        this.printQuestAndAns= function() {
+            console.log(this.question)
+            console.log(this.ansArr)
+        }
+        this.printCorrectAns=function(answer,keepscore){
+        if (answer==this.correctAns) {
+                console.log('correct answer!')
+            }
+            else{
+                console.log('wrong answer!')
+            }
+        }
+    }
+    
+    //question,answers and correct answer number creation
+    var quest1=new Question('what is my name?',['0: rea','1: roy','2: orel'],0)
+    var quest2=new Question('what`s my favorite movie saga?',['0: harry potter','1: star wars','2: startrek'],1)
+    var quest3=new Question('what is my girlfriends name?',['0: dana','1: noa','2: keren'],2);
+    var quest4=new Question('whats the last video game i played?',['0: swtor','1: the division 2','2: metro exodus'],1);
+    var questArr=[];
+    var answer;
+    var score=0;    
+    questArr.push(quest1)
+    questArr.push(quest2)
+    questArr.push(quest3)
+    questArr.push(quest4)
+    
+    for (let i = 0; i < questArr.length; i++) {
+        //making a random question number
+        var randQuest=Math.floor(Math.random()*4);
+        //printing the question and its answers
+        questArr[randQuest].printQuestAndAns()
+        //asking input from user
+        answer=prompt('enter answer number or write exit to exit program ')
+        if (answer=='exit') {
+            console.log('goodbye!')
+            break;
+        }
+        //printing if the user was right or wrong
+        questArr[randQuest].printCorrectAns(answer);
+        //score calculation
+        if (questArr[randQuest].correctAns==answer) {
+            score++
+        }
+        else{
+            score--;
+        }
+        console.log('your score is '+score)
+        console.log('======================')
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

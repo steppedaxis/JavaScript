@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    //SYNC code
+    //synchronous code will excute line by line with a constant order that every command we write will excute one after another
+    console.log('============SYNC CODE============\n')
+
+    second=()=>{
+        console.log('second')
+    }
+    
+    first=()=>{
+        console.log('hey there!')
+        second();
+        console.log('the end')
+    }
+    first();
+
+    console.log('============SYNC CODE END============\n\n\n\n\n')
+
+    
+    
+    //ASYNC CODE
+    console.log('============ASYNC CODE============\n')
+
+    second=()=>{
+        setTimeout(()=>{
+            console.log('ASYNC second') //setTimeout will set a timer that will tell after how many time the function will excute in miliseconds
+            console.log('============ASYNC CODE END============\n')//in the manner:the function first will run first and log 'hey there',then go to the function called second which will happen after 2 seconds meaning that 'the end' will log first and only after 2 sedconds 'ASYNC second' will log         
+        },2000)
+    }
+    
+    first=()=>{
+        console.log('hey there!')
+        second();
+        console.log('the end')
+    }
+    first();
+
+
+
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

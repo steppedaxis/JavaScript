@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    
+    
+    function interviewQuestions(job){
+        if(job=='designer'){
+            return function(name){
+                console.log(name+' '+', please explain UX design')
+            }
+        }
+        else if(job=='teacher'){
+            return function(name){
+                console.log(name+ ' '+ ', what subject do you teach')
+            }
+        }
+        else{
+            return function(name){
+                console.log('hello '+name+', what do you do?')
+            }
+        }
+    }
+
+    var teacherQuestion=interviewQuestions('teacher');
+    teacherQuestion('john')
+
+    var designerQuestion=interviewQuestions('designer');
+    designerQuestion('mark')
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

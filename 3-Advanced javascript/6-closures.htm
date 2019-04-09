@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+    function retire(retAge){
+        var a='years left until retirement'
+        return function(birthYear){
+            var age=2019-birthYear
+            console.log((retAge-age)+a)
+        }
+    }
+
+    var retireAge_US=retire(66)(1999)
+
+
+    function interviewQuestion(job){
+        return function(name){
+            if(job==='teacher'){
+                console.log(name+' , what do you teach?')
+            }
+            else if(job==='designer'){
+                console.log(name+' , explain UEX design!')
+            }
+            else{
+                console.log(name+' , what do you do?')
+            }
+        }
+    }
+
+    interviewQuestion('teacher')('mark')
+    interviewQuestion('designer')('john')
+    interviewQuestion('carpenter')('ellie')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    //ES5 - CALLBACK HELL
+    function Getrecipe(){
+        setTimeout(() =>{ // this setTimeout is to simulate the recipeID array coming back from a server
+            recipeID=[523,883,432,974]
+            console.log(recipeID);
+
+            setTimeout((id)=>{
+                recipe={
+                    title:'fresh tomato sauce',
+                    publisher:'rea'
+                }
+                console.log(`${id}:${recipe.title}`)
+                console.log(`publisher:${recipe.publisher}`)
+
+                setTimeout(publisher =>{
+                    recipe={
+                        title:'pizza',
+                        publisher:'rea'
+                    }
+                    console.log(`${id}:${recipe.title}`)
+                    console.log(`publisher:${recipe.publisher}`)
+                },1500,recipe.publisher)
+
+            },1000,recipeID[2])
+        },1500 )
+
+    }
+
+    Getrecipe();
+
+
+
+
+
+
+
+</script>
+
+
+<body>
+    
+</body>
+</html>

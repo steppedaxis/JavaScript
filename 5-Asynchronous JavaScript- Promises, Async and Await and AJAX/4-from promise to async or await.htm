@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    // promise is a function that recieves two arguments:resolve and reject, and it helps us track about whether a certain event has happend or not, and it determines what happens after that same event has happend
+    getIDs=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve([523,863,432,974])
+            //reject([523,863,432,974]) reject is the 'error state' pretty much
+        },1500)
+    })
+
+    getRecipe=recipeID=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(ID =>{
+                recipe={
+                    title:'fresh tomato sauce',
+                    publisher:'rea'
+                }
+                resolve(`${ID}:${recipe.title}`)
+            },1500,recipeID)
+        })
+    }
+
+    getRelated=publisher=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(ID=>{
+                recipe={
+                    title:'pizza',
+                    publisher:'rea'
+                }
+                resolve(`${ID}:${recipe.title}`)
+            },1500,publisher)
+        })
+    }
+
+    // getIDs
+    // .then(IDs => { //.then() is used to handle the furfilled promise
+    //     //we pass into the .then() function how the furfilled promise is handeld
+    //     console.log(IDs) // logs  [523,863,432,974]
+    //     return getRecipe(IDs[2])
+    // })
+    // .then(recipe=>{
+    //     console.log(recipe)
+    //     return getRelated('rea')
+    // })
+    // .then(recipe=>{
+    //     console.log(recipe)
+    // })
+    // .catch(error=>{ //.catch() is used to handle the promise when its not furfilled(reject ,usually an error)
+    //     console.log('error!')
+    // })
+
+    async function GetRecpiesAsyncAwait() {
+        //the await keyword will make the function wait for another function to excute and only then will continue excute
+        //IDs will be what the resolved value is from the function,in this case the array [523,863,432,974]
+        //await can only be used in an async function
+      const IDs=await getIDs
+        console.log(IDs)
+
+        const recpie=await getRecipe(IDs[2])
+        console.log(recipe)
+
+        const related=await getRelated('rea')
+        console.log(related)
+
+        return recpie
+
+    }
+    GetRecpiesAsyncAwait().then(result=>console.log(`${result}`));
+
+
+
+
+
+
+
+</script>
+
+
+
+<body>
+    
+</body>
+</html>

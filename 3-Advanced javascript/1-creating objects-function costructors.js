@@ -1,0 +1,49 @@
+/*
+costructor prototype explaination:
+
+1) Every JavaScript object has a prototype property,which makes inheritance possible in JavaScript.
+
+2) The prototype property of an object is where we put methods and properties that we want other objects to inherit.
+
+3) The Constructor's prototype property is not the prototype of the Constructor itself, but it's the prototype of all instances that are created through it.
+
+4) When a certain method, or property, is called, the search starts in the object itself, and if it cannot be found there, the search moves up on to the object's prototype.
+This continues until the method is found, this is the prototype chain.
+*/
+
+// normal way to write objects,as we have learned before
+var john={
+    name:'john',
+    birth_year:1993,
+    job:'teacher'
+}
+
+
+
+
+//that is how we write constructors(or classes)in javascript, its actually a function
+// that hold the variabels we want the class to have.
+//note: by standart, its is well known that class names will always be written with a capital letter
+var Person=function(name,year_birth,job) {
+  //we write this, so that javascript will know that the name it gets will refer to the object that is created as an instance of the Person class
+    this.name=name //we write this, so that javascript will know that the name it gets will refer to the object that is created as an instance of the Person class
+    this.year_birth=year_birth
+    this.job=job
+
+    //this is how a class method is created,always remember the 'this' keyword
+    this.calcage=function () {
+        console.log(2019-this.year_birth)
+    }
+}
+
+Person.prototype.incomcalc=function() {
+    console.log(700)
+};
+
+//the 'new' word means that a new empty instance is created and refers the given variables at the constructor to the instance itslef
+//that is how we create an instance of the Person class,as john,1998 and teacher are values that are sent to the Person consturctor
+var john=new Person('john',1998,'teacher')
+var jane=new Person('jane',1995,'designer')
+var mark=new Person('mark',1990,'retired')
+
+jane.incomcalc()

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+       function GetWheather(woeid) {
+        
+    
+        //fetch() is a function that will fetch a web api from a url specified in it and will send requests for it and recieve answers from it
+        //The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible feature set.
+        fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)// we gave the url of london wheather from the metawheather api site
+        //Now in order to actually allow developers to make requests to different domains,
+        //something called Cross Origin Resource Sharing, or CORS, was developed.
+        //in simple terms, the developers of the API that we are requesting from, they need to implement CORS
+        //on their server. That's actually the case for many APIs but unfortunately not for MetaWeather.
+    
+        //fetch automaticlly returns a promise without the programmer needing to produce it himself, and he can now consume it with then() and catch()
+        .then(result=>{ 
+            //result is the varaible that will contain the answer that returns from the fetch
+            //console.log(result) // because that the result returned to us in the log is unreadable, we need to handel it in json format so it is readable
+            return result.json();//.json() returns a promise also, so we can chain it with another .then method after it
+        })
+        .then(data=>{
+            //console.log(data);
+            //today=data.consolidated_weather[0]//we take from the consolidated_weather array in the api,the first value
+            //console.log(`temperaturs in ${data.title} stay between ${today.min_temp} and ${today.max_temp}`)//then we print it as shown in the response
+        })
+        .catch(error=>console.log(error))
+    
+    }
+    
+    //GetWheather(44418)
+    //GetWheather(2487956)
+
+    async function GetWheatherAW(woeid) {
+        try {
+        result=await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
+        data=await result.json()
+        tommorow=data.consolidated_weather[1]
+        console.log(`temperaturs in ${data.title} stay between ${tommorow.min_temp} and ${tommorow.max_temp}`)//then we print it as shown in the response
+        return data
+        } catch (error) {
+            alert(error)
+        }
+    
+
+    }
+    GetWheatherAW(44418)
+    GetWheatherAW(2487956)
+    
+
+
+
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

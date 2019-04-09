@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+var john={
+    name:'john',
+    age:26,
+    job:'teacher',
+    presentation:function(style,timeofday){
+        if (style=='formal') {
+            console.log('good ' + timeofday+' ladies and gentelman!\nmy name is '+this.name+' and im '+this.age+' years old')
+        }
+        else if (style=='friendly'){
+            console.log('hey there! whats up?\n im '+this.name+' and im '+this.age+' years old\ni work as a '+this.job)
+        }
+    }
+}
+
+var emily={
+    name:'emily',
+    age:35,
+    job:'designer'
+}
+
+john.presentation('formal','morning')
+
+//the call method will 'borrow' the presentation from the john object to the emily object, setting the 'this' variable to emily and thus making all the varibales relate to the emily instance
+john.presentation.call(emily,'friendly','afternoon')
+
+//the apply will do the same as the call method, the only diffrance is that it gets an array,it wont work with the presentation function since it dosent ask for an array,but just to show us that this is how it works
+john.presentation.apply(emily,['friendly','afternoon'])
+
+//the bind function will create a function with preset arguments
+var johnFreindly=john.presentation.bind(john,'friendly')
+johnFreindly('morning');
+var emilyFormal=john.presentation.bind(emily,'formal');
+emilyFormal('afternoon')
+
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>
