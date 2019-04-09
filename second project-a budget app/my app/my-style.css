@@ -1,0 +1,131 @@
+/*******************TOP AREA********************/
+.text_top{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+    left: 40%;
+    top: 5%;
+    color:#3333ff
+}
+
+.picture{
+    position: absolute
+}
+
+.budget_num{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 350%;
+    left: 44%;
+    top: 10%;
+    color:#3333ff
+}
+
+
+
+.INCOME{
+    position: absolute;
+    background-color: #28B9B5;
+    width: 15%;
+    height: 5%;
+    left: 44%;
+    top: 19%;
+}
+
+.income_txt{
+    position: absolute;
+    bottom: -39%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:whitesmoke;
+    font-size: 150%
+}
+
+.EXPENSES{
+    position: absolute;
+    background-color: #FF5049;
+    width: 15%;
+    height: 5%;
+    left: 44%;
+    top: 26%;
+}
+
+.expenses_txt{
+    position: absolute;
+    bottom: -39%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:whitesmoke;
+    font-size: 150%
+}
+
+
+
+/*****************************MIDDLE AREA*************************/
+
+.middle_area{
+    position: absolute;
+    background-color: whitesmoke;
+    top: 40.7%;
+    height: 10%;
+    margin: 0;
+    width: 99.6%;
+    text-align: center
+}
+
+.add__description{
+  border: 2px solid grey;
+  border-radius: 6px;
+  position: relative;
+  height: 47%;
+  width: 20%;
+  top: 25%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 120%
+  
+}
+
+.add__value{
+    border: 2px solid grey;
+    border-radius: 6px;
+    position: relative;
+    height: 47%;
+    width: 6%;
+    top: 25%;
+    left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%
+}
+
+::placeholder {
+    color: black;
+    position: relative;
+    left: 5%;
+}
+
+.add_type_button{
+  border: 2px solid grey;
+  border-radius: 6px;
+  position: relative;
+  right: 0.5%;
+  height: 55%;
+  width: 6%;
+  top: 25%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 120%
+}
+
+.income{
+    position: absolute;
+    top: 52%;
+    left: 30%;
+
+}
+
+.expenses{
+    position: absolute;
+    top: 52%;
+    left: 65%;
+
+}
+
+
+

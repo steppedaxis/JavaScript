@@ -1,0 +1,219 @@
+body{
+    background-image:  url("back.jpg");
+    
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    
+  }
+
+  html, body {
+    min-width: 1080px; 
+    width: 1080px; 
+    height: 1920px; 
+    position: fixed;
+    margin:auto;
+}
+
+
+
+
+
+  .player0_panel{
+    background-color: aqua;
+    width: 350px;
+    height: 350px;
+    top: 12%;
+    left: 54%;
+    text-align: center;
+    position: absolute;
+    box-sizing: border-box;
+
+  }
+
+  .player_name_p0{
+    position: relative;
+    top: 2%;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+
+  
+  .score_p0{
+    position: relative;
+    top: 70px;
+    font-size: 50px;
+    font-weight: 100;
+    color: #EB4D4D;
+  }
+
+  .current_box_p0{
+    position: relative;
+    top: 45%;
+    border-style: solid;
+    width: 30%;
+    left: 34%;
+    background-color: #EB4D4D;
+    color: #fff;
+  
+  }
+
+  .current_score_p0{
+    font-size: 30px;
+  }
+
+  .current_write_p0{
+    color: #222;
+    text-transform: uppercase;
+  }
+
+  
+  
+  
+  
+  
+  
+  .player1_panel{
+    background-color:blueviolet;
+    position: absolute;
+    width: 33%;
+    height: 18.3%;
+    top: 12%;
+    left: 86%;
+    margin-bottom: 22%;
+    text-align: center;
+
+    
+  }
+
+  .player_name_p1{
+    position: relative;
+    top: 3%;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+
+  .score_p1{
+    position: relative;
+    top: 70px;
+    font-size: 50px;
+    font-weight: 100;
+    color: #EB4D4D;
+  }
+
+  .current_box_p1{
+    position: relative;
+    top: 45%;
+    border-style: solid;
+    width: 60px;
+    left: 34%;
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 30%;
+
+  
+  }
+
+  .current_score_p1{
+    font-size: 30px;
+  }
+
+  .current_write_p1{
+    color: #222;
+    text-transform: uppercase;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .new_button{
+    position: absolute;
+    right: 80%;
+    bottom: 70%;
+    transform: translateX(-50%);
+    color: #555;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .hold_button{
+    position: absolute;
+    right: 80%;
+    top: 85%;
+    transform: translateX(-50%);
+    color: #555;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .roll_button{
+    position: absolute;
+    right: 80%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    color: #555;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+
+  }
+
+  .dice_img{
+    position: absolute;
+    width: 20%;
+    right: 90%;
+    top: 35%;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+
+  }
+
+
+
+
+
+
+  #right{
+    position: absolute;
+    width: 10%;
+    left: -5%;
+    bottom: 88%;
+
+  }
+
+  #left{
+    position: absolute;
+    width: 10%;
+    left: -5%;
+    bottom: 88%;
+  }
+
+  
+  

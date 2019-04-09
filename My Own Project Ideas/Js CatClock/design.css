@@ -1,0 +1,25 @@
+html,body {
+    background-image: url("clock.jpg");
+    height: 10%;
+    /* Center and scale the image nicely */
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+
+.timer{
+    position: absolute;
+    background-color: #4CAF50; /* Green */
+    font-size: 20px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    color: blue
+}
