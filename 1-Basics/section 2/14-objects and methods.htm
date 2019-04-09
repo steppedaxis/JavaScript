@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>\
+
+
+<script>
+var john = { //defining a new object
+    name:'john',// key:value,
+    lstname:'smith',
+    birthyear:1990,
+    family:['jane','mark','bob','emily'],
+    job:'teacher',
+    ismarried:false,
+    calcage:function(){ //we can create a function variable in objects as well,while putting any kind of parameters we want to it
+        this.age=2018-this.birthyear;//this- refers to the object of the same instance it relates to, in our casem, the john object instance
+    }
+};//semicolon ends the object defenision
+console.log(john.calcage(1990))
+john.age=john.calcage(); //adding a new property while calling the calcage function in the john object
+john.calcage();
+console.log(john)
+
+</script>
+
+
+
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+//falsy values : undefined,null,0,'',NaN
+//truthy values: not falsy values
+
+var height=23;
+if (height) {
+    console.log("var is defined")
+}
+else{
+    console.log("var is not defined")
+}
+// an undefined variable is a falsy value tjat has been initialized but only defined
+
+// == : only checks if the values in each variable are equal,it also coerce the string to int
+// === : checks if the type and value of each variable are equal
+
+if (height=='23') {
+    console.log("true")
+}
+else{
+    console.log("false");
+}
+// will print true becuase that the '23' string will be coerced into an int type
+
+if (height==='23') {
+    console.log("true")
+}
+else{
+    console.log("false");
+}
+// will print false
+
+</script>
+
+
+
+
+<body>
+    
+</body>
+</html>

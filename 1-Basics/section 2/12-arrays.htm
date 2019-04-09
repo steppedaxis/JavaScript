@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+//array- a colletction of variables that may be of diffrent types
+
+//array initialization
+var names=['jhon','mark','jane'];//this one is most used, its index works just as we know it in other languages
+var years=new Array(1990,1991,1992)//create an array instance
+
+
+console.log(names);//prints array+length
+console.log(names.length);//prints array length(number of elements)
+console.log(names[2]);//prints "jane"(in index 2 of array)
+
+//mutate array
+names[1]='ben'//we can change the array by index
+names[5]='marry'//will add element in the fifth index
+names[names.length]='mary'//add element in the last index of it
+
+
+//diffrent data types--- arrays can contain varaibles of diffrent data types
+var john=['john','smith',1996,'teacher',false];
+
+john.push('blue')// .push()--addes a new element of any type in the last index of the array
+john.unshift('mr.')//.shift()--addes a new element of any type in the first index of the array
+john.pop() // removes the element at the last index of the array
+john.shift()// removes the element at the first index of the array
+john.indexOf(1996) // indexof return the index of the selected element in the array, if there is no element in the array,we will get -1
+
+var isdesigner=john.indexOf('designer') === -1 ? 'john is not a designer' : 
+'john is a designer'
+
+console.log(isdesigner)
+</script>
+
+
+
+
+
+<body>
+    
+</body>
+</html>

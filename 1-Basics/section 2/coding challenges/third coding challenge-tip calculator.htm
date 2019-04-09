@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+var bill_arr=[124,48,268];
+
+var tipARR=[];
+var finalPayARR=[];
+
+function func(bill_array) {
+    for (let index = 0; index < bill_array.length; index++) {
+        const element = bill_array[index];
+        var tip;
+        var final;
+        if (element<=50) {
+           tip=element * 0.2
+           tipARR.push(tip)
+           final=tip+element
+           finalPayARR.push(final)
+        }
+        else if (element>=50 && element<=200) {
+            tip=element * (15/100)
+            tipARR.push(tip);
+            final=tip+element
+           finalPayARR.push(final)
+        }
+        else if (element>200) {
+            tip= element*(10/100);
+            tipARR.push(tip)
+            final=tip+element
+           finalPayARR.push(final)
+        }
+    }
+}
+
+func(bill_arr)
+console.log(tipARR)
+console.log(finalPayARR)
+
+
+
+
+
+
+
+</script>
+
+
+
+<body>
+    
+</body>
+</html>

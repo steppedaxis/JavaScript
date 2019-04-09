@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+
+//function expression-we can create a variable which is a function,that is why its called an expression
+var what_am_i_doing = function func(job,firstname) {
+    switch (job) {
+        case "teacher":
+            return firstname+"teaches" 
+        case "driver":
+            return firstname+"teaches driving"
+        case "designer":
+            return firstname+"teaches designing"
+        
+        default:
+            return firstname+"does something else"
+            break;
+    }
+}
+
+//we can call the function with console.log(function_name(parameters))
+console.log(what_am_i_doing("teacher","john"));
+console.log(what_am_i_doing("designer","jane"));
+console.log(what_am_i_doing("retired","mike"));
+
+//expression-a piece of code that return a certin value(functions,if and else, etc....)
+//a statment does not produce a result immiedeatly
+
+</script>
+
+
+
+<body>
+    
+</body>
+</html>

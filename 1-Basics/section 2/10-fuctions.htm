@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+function calculateAge/*fuction name*/(birthYear/*parameters we want to pass*/) {
+    return 2018 - birthYear // return a certin variable or any other thing
+}
+
+var ageJohn/*a variable to store the returned number*/=calculateAge(1990/*the argument we want to pass*/) // function call method
+var agejane=calculateAge(1988)
+var age_mike=calculateAge(1995)
+
+console.log(ageJohn,agejane,age_mike)
+
+function years_until_retire(year,firstname) {
+    var age=calculateAge(year) //recursion-a fumction calling a function
+    var retire=65-age
+    if (retire>0) {
+        console.log(firstname+" retires in "+retire+" years")
+    }
+    else{
+        console.log(firstname+" is not retired")
+    }
+}
+
+years_until_retire(1993,"rea")
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

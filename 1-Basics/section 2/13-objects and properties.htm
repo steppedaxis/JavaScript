@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<script>
+var john = { //defining a new object
+    name:'john',// key:value,
+    lstname:'smith',
+    birthyear:1990,
+    family:['jane','mark','bob','emily'],
+    job:'teacher',
+    ismarried:false
+};//semicolon ends the object defenision
+
+console.log(john.name);
+console.log(john['lstname'])//we may get data from a certin varaible by typing its name in string format in []
+var x='birthyear'//we can get data from an object into a varaible
+console.log(john[x])// we may also call that variable with the object namm -- objName:[variable]
+
+//object mutate
+john.job='designer'
+john['ismarried']=true
+console.log(john)
+
+//another way for object initialization
+var jane=new Object();
+jane.name='jane';
+jane.birthyear='1987'
+jane['lstname']='smith'
+console.log(jane)
+
+
+
+</script>
+
+
+<body>
+    
+</body>
+</html>

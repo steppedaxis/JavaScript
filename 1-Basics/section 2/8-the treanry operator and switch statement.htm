@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+var firstName='john'
+var age=16
+//treanry operators-meaning that it has three operands---> condition ? if block : else block 
+age>=18 ? console.log(firstName+'drinks beer') : console.log(firstName+'drinks juice')
+
+//another example for a varaible definition using a trenray technique
+var drink=age>=18 ? 'beer' : 'juice'
+console.log(drink)
+
+
+
+//switch statment- pretty much as we know it
+var job='instructor'
+
+switch (job) {
+    case 'teacher': //can put a few cases that do the same thing, only make sure that there is no break
+    case 'instructor':
+        console.log(firstName+' teaches how to code')
+        break; //has to be in each case, althow if we want it to apply to few cases, than no need for it
+    case 'driver':
+        console.log(firstName+' teaches how to drive')
+        break;
+
+    default: // will happen if non of the cases are met
+        console.log(firstName+' he does something else')
+        break;
+}
+
+
+
+</script>
+
+
+
+<body>
+    
+</body>
+</html>

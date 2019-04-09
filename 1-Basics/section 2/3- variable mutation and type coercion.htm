@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+
+
+<script>
+
+var firstName='john'
+var age=28
+
+console.log(firstName + ' ' + age) // can console log joined varaibels
+// note: this is called type coercion ----> javascript will automaticlly convert the 'age' varaible to a string type to be able to join it with a string type, as console log prints the variables
+var job,is_married; // we can declare many variables with ' , '
+job='teacher';
+is_married=false;
+// another type coecrcion
+console.log(firstName+' is a '+age+' year old '+ job +  ' is he married? :  ' + is_married)
+
+//variable mutation--> javascript can change types of datatypes on the fly!
+age='twenty eight';
+job='driver'
+alert(firstName+' is a '+age+' year old '+ job +  ' is he married? :  ' + is_married)
+// alert()--->a function that prompts an alert window with what we want
+// note: the html page will not finish loading until we hit ok in the alert window
+
+var lastname=prompt('what is his last name');
+//prompt()---> a function that asks for user input
+console.log(firstName+' '+lastname)
+
+
+</script>
+
+</html>

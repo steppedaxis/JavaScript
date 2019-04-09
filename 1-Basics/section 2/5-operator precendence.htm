@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var now=2018
+    var yearJohn=1986
+    var fullage=18
+    // the precedence here is first yearJohn >= fullage and then now - so we will get true
+    var isfullage=now - yearJohn >= fullage
+    
+    console.log(isfullage)
+
+    var isfullage=(now - yearJohn) >= fullage
+    // the precedence here is first (now - yearJohn) and then >= fullage - so we will get true
+    console.log(isfullage)
+
+    //precedence with calculating avrage
+    var agejohn=now-yearJohn
+    var agemark=35
+    var avreage=(agejohn + agemark) / 2
+    console.log(avreage)
+
+
+    //note to self: javascript works just like math precedence rules!
+
+</script>
+
+
+<body>
+    
+</body>
+</html>
