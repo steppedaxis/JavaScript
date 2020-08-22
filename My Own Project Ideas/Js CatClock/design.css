@@ -1,25 +1,48 @@
-html,body {
-    background-image: url("clock.jpg");
-    height: 10%;
-    /* Center and scale the image nicely */
+body{
+    background-color: brown;
+    text-align: center;
 }
 
-.clock {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+
+.headline{
+   
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+}
+
+#clock {
+   
+   margin-top: 50px;
+    text-align: center;
     color: #17D4FE;
     font-size: 60px;
     font-family: Orbitron;
     letter-spacing: 7px;
 }
 
-.timer{
-    position: absolute;
-    background-color: #4CAF50; /* Green */
-    font-size: 20px;
+
+#image{
+    background-image: url("unnamed.jpg");
+    height: 340px;
+    width: 500px;
+    background-repeat: no-repeat;
+    border-width: 10px;
+    border-style: groove;
+    border-color: black;
+    display: inline-block;
+    margin-top: 50px;
+   border-radius: 20px;
+
+}
+
+#timer{
+    
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
     font-family: Orbitron;
     letter-spacing: 7px;
-    color: blue
 }

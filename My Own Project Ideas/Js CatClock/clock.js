@@ -7,12 +7,24 @@ GetTime=()=> {
     
     let time=`${hours}:${minutes}:${seconds}`;
     
-    document.getElementById("MyClockDisplay").innerText=time;
-    document.getElementById("MyClockDisplay").textContent=time;
+    
+
+
+    document.getElementById("clock").innerText=time;
+    document.getElementById("clock").textContent=time;
+
+
+
+
+
+
 
     setTimeout(GetTime,1000)
     
     }
+
+
+    
 
     GetTime();
 
